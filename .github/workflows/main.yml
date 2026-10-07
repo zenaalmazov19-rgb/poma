@@ -31,6 +31,12 @@ jobs:
           mkdir project
           unzip -q AdBlockAndroid-source.zip -d project
 
+      - name: Включить AndroidX
+        working-directory: project
+       run: |
+          echo "android.useAndroidX=true" >> gradle.properties
+          echo "android.enableJetifier=true" >> gradle.properties
+
       - name: Подключить Compose Compiler
         working-directory: project
         run: |
