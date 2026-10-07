@@ -33,7 +33,7 @@ jobs:
 
       - name: Включить AndroidX
         working-directory: project
-       run: |
+        run: |
           echo "android.useAndroidX=true" >> gradle.properties
           echo "android.enableJetifier=true" >> gradle.properties
 
